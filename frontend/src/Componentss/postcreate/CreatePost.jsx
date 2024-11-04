@@ -52,7 +52,7 @@ const CreatePost = ({ open, setopen }) => {
         setopen(false);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error("Error Posting");
     } finally {
       setLoading(false);
     }
