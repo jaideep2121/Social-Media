@@ -9,18 +9,19 @@ import Commentdialog from "./Commentdialog";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "sonner";
 import axios from "axios";
-import { setPosts, setSelectedPost } from "@/redux/PostSlice";
+
 import { Badge } from "@/components/ui/badge";
 import { GoBookmark } from "react-icons/go";
 import { BookmarkFilledIcon } from "@radix-ui/react-icons";
 import { GoBookmarkFill } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { setPosts ,setSelectedPost} from "@/redux/rost.Slice";
 
 const Pos = ({ post }) => {
   const [text, settext] = useState("");
   const [open, setopen] = useState(false);
   const { user } = useSelector((store) => store.auth);
-  const { posts } = useSelector((store) => store.post);
+  const { posts } = useSelector((store) => store.rost);
   const dispatch = useDispatch();
   const [liked, setliked] = useState(post.likes.includes(user?._id) || false);
   const [postlike, setpostlike] = useState(post.likes.length);

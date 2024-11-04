@@ -1,9 +1,6 @@
-
-
-
-
 import { createSlice } from "@reduxjs/toolkit";
-const postSlice = createSlice({
+
+const rostSlice = createSlice({
     name:'post',
     initialState:{
         posts:[],
@@ -19,5 +16,6 @@ const postSlice = createSlice({
         }
     }
 });
-export const {setPosts, setSelectedPost} = postSlice.actions;
-export default postSlice.reducer;
+
+export const {setPosts,setSelectedPost}=rostSlice.actions;
+export default rostSlice.reducer;

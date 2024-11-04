@@ -3,7 +3,7 @@ import Pos from './Pos'
 import { useSelector } from 'react-redux'
 
 const Post = () => {
-  const {posts}=useSelector(store=>store.post);
+  const {posts}=useSelector(store=>store.rost);
   return (
     <div>
         {

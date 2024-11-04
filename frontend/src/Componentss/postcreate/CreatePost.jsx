@@ -5,11 +5,15 @@ import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { setPosts } from '@/redux/postSlice';
+
 import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { setPosts } from '@/redux/rost.Slice';
+
+
+
 
 const CreatePost = ({ open, setopen }) => {
   const imageRef = useRef();
@@ -18,7 +22,7 @@ const CreatePost = ({ open, setopen }) => {
   const [imagePreview, setImagePreview] = useState("");
   const [loading, setLoading] = useState(false);
   const {user} = useSelector(store=>store.auth);
-  const {posts} = useSelector(store=>store.post);
+  const {posts} = useSelector(store=>store.rost);
   const dispatch = useDispatch();
 
   const fileChangeHandler = async (e) => {

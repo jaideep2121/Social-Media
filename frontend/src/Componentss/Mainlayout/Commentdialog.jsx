@@ -6,14 +6,15 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Comment from "./Comment";
-import { setPosts } from "@/redux/PostSlice";
+
 import axios from "axios";
 import { toast } from "sonner";
+import { setPosts } from "@/redux/rost.Slice";
 
 const Commentdialog = ({open,setopen}) => {
 
   const { user } = useSelector((store) => store.auth);
-  const { selectedPost ,posts} = useSelector((store) => store.post);
+  const { selectedPost ,posts} = useSelector((store) => store.rost);
     const[text,settext]=useState("");
     const [comment, setComment] = useState([]);
     const dispatch = useDispatch();
