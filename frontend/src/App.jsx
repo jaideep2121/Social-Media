@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      const socketio = io('https://logo-media-i3uh.onrender.com', {
+      const socketio = io('http://localhost:4000', {
         query: {
           userId: user?._id
         },
