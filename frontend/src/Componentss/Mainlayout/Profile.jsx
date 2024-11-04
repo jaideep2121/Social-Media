@@ -33,7 +33,7 @@ setactive(tab);
  async function followunfollow(){
   try{
     const res = await axios.get(
-      `https://logo-media-i3uh.onrender.com/api/v1/user/followorunfollow/${params.id}`,
+      `http://localhost:4000/api/v1/user/followorunfollow/${params.id}`,
      
      {
         withCredentials: true,

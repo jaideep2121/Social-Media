@@ -10,7 +10,7 @@ const UseGetAllPost = () => {
   useEffect(() => {
     const Fetchalpost = async () => {
       try {
-        const res = await axios.get("https://logo-media-i3uh.onrender.com/api/v1/post/all", {
+        const res = await axios.get("http://localhost:4000/api/v1/post/all", {
           withCredentials: true,
         });
         if (res.data.success) {

@@ -26,7 +26,7 @@ const Chatpage = () => {
 
     async function sendhandler(receiverId){
         try{
-            const res=await axios.post(`https://logo-media-i3uh.onrender.com/api/v1/message/send/${receiverId}`,{text},{
+            const res=await axios.post(`http://localhost:4000/api/v1/message/send/${receiverId}`,{text},{
                 headers:{
                     'Content-Type':'application/json'
                 },

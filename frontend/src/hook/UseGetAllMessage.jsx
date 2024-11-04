@@ -9,7 +9,7 @@ const UseGetAllMessage = () => {
     useEffect(() => {
         const fetchAllMessage = async () => {
             try {
-                const res = await axios.get(`https://logo-media-i3uh.onrender.com/message/all/${selectedUser?._id}`, { withCredentials: true });
+                const res = await axios.get(`http://localhost:4000/message/all/${selectedUser?._id}`, { withCredentials: true });
                 if (res.data.success) {  
                     dispatch(setMessages(res.data.messages));
                 }

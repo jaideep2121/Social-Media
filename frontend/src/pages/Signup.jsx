@@ -34,7 +34,7 @@ const signuphandler = async (e) => {
     try {
         setloading(true);
         
-        const res = await axios.post('https://logo-media-i3uh.onrender.com/api/v1/user/register', input, {
+        const res = await axios.post('http://localhost:4000/api/v1/user/register', input, {
             headers: {
                 'Content-Type': 'application/json'
             },
