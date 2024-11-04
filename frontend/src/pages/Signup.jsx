@@ -54,7 +54,7 @@ const signuphandler = async (e) => {
         }
     } catch (error) {
         console.log(error);
-        toast.error(error.response.data.message);
+        toast.error("Failed to signup");
     } finally{
         setloading(false);
     }
