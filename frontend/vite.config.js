@@ -6,14 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: { manifest: true, outDir: './dist'},
 
-  server: {
-	
-		proxy: {
-			"/api": {
-				target: "https://logo-media-i3uh.onrender.com",
-			},
-		},
-	},
+ 
 
   resolve: {
     alias: {
