@@ -44,7 +44,7 @@ const Loginhandler = async (e) => {
     try {
         setloading(true);
         
-        const res = await axios.post('https://logo-media-i3uh.onrender.com/api/v1/user/login', input, {
+        const res = await axios.post('https://logo-social-media.onrender.com/api/v1/user/login', input, {
             headers: {
                 'Content-Type': 'application/json'
             },
