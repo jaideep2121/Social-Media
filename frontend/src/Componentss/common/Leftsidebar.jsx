@@ -119,12 +119,6 @@ const sidebarItems = [
             })
         }
 
-        <Link to="/portfolio">
-        <div className='flex items-center gap-3  relative hover:bg-gray-100 cursor-pointer rounded-lg p-3 my-3' >
-<span><FcPortraitMode></FcPortraitMode></span>
-<span>Owner Info</span>
-     </div>
-        </Link>
 
    
 </div>
