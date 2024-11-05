@@ -40,7 +40,7 @@ const Pos = ({ post }) => {
   const deletePostHandler = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:4000/api/v1/post/delete/${post?._id}`,
+        `https://logo-social-media.onrender.com/api/v1/post/delete/${post?._id}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -59,7 +59,7 @@ const Pos = ({ post }) => {
   const likeOrDislikeHandler = async () => {
     try {
         const action = liked ? 'dislike' : 'like';
-        const res = await axios.get(`http://localhost:4000/api/v1/post/${post._id}/${action}`, { withCredentials: true });
+        const res = await axios.get(`https://logo-social-media.onrender.com/api/v1/post/${post._id}/${action}`, { withCredentials: true });
         console.log(res.data);
         if (res.data.success) {
             const updatedLikes = liked ? postlike - 1 : postlike + 1;
@@ -83,7 +83,7 @@ const Pos = ({ post }) => {
   const commentHandler = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:4000/api/v1/post/${post._id}/comment`,
+        `https://logo-social-media.onrender.com/api/v1/post/${post._id}/comment`,
         { text },
         {
           headers: {
@@ -113,7 +113,7 @@ const Pos = ({ post }) => {
   const bookmarkHandler = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/v1/post/${post?._id}/bookmark`,
+        `https://logo-social-media.onrender.com/api/v1/post/${post?._id}/bookmark`,
         { withCredentials: true }
       );
       if (res.data.success) {
