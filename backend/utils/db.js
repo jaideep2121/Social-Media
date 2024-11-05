@@ -5,7 +5,7 @@ dotenv.config();
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb://0.0.0.0:27017/CLONE");
+        await mongoose.connect(process.env.MONGO_URL);
       
         console.log('mongodb connected successfully.');
     } catch (error) {
